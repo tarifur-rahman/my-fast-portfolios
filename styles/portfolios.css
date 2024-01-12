@@ -43,9 +43,9 @@ nav a{
 
 .header{
     background-color: #FFF8F3;
-    background-image: url('../images/header_bg.png');
+    background-image:url('../images/header_bg.png'), url('../images/developer.png');
     background-repeat: no-repeat;
-    background-position: bottom right;
+    background-position: bottom right,top left;
 }
 .banner{
     padding: 30px 30px 0px 150px;
@@ -206,4 +206,43 @@ footer{
     background-color: #fff;
     border: 0;
     width: 100%;
+}
+.hide{
+    display: none;
+}
+
+@media screen and (max-width:576px) {
+    .banner .profile-pic{
+        width: 100%;
+    }
+    .header{
+        background-image: none;
+    }
+    nav > ul,
+    .skills-container,.banner,nav{
+        flex-direction: column;
+    }
+    .banner,
+    #what-i-do-description{
+        padding: 20px;
+    }
+    .resume-container{
+        flex-direction: column;
+    }
+    .about{
+        padding: 10px;
+    }
+    .about-info-container{
+        flex-direction: column;
+    }
+    footer{
+        flex-direction: column;
+        padding: 10px;
+    }
+    .footer-column{
+        width: 100%;
+    }
+    .contact input[type="text"], .contact input[type="email"], textarea{
+        width: 80%;
+    }
 }
